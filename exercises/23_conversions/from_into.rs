@@ -42,7 +42,6 @@ impl Default for Person {
 // Person Otherwise, then return an instantiated Person object with the results
 
 impl From<&str> for Person {
-<<<<<<< HEAD:exercises/conversions/from_into.rs
     fn from(s: &str) -> Person {
         if s.len() == 0 {
             return Person::default();
@@ -66,12 +65,6 @@ impl From<&str> for Person {
             Person::default()
         }
     }
-||||||| 9a743f8:exercises/conversions/from_into.rs
-    fn from(s: &str) -> Person {
-    }
-=======
-    fn from(s: &str) -> Person {}
->>>>>>> main:exercises/23_conversions/from_into.rs
 }
 
 fn main() {
