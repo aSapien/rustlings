@@ -3,8 +3,12 @@
 // Execute `rustlings hint functions1` or use the `hint` watch subcommand for a
 // hint.
 
-// I AM NOT DONE
+fn call_me (a: &str) {
+    println!("Call me maybe, {}", a);
+}
 
 fn main() {
-    call_me();
+    let x = 3;
+    println!("Number {}", x);
+    call_me("Fima");
 }
