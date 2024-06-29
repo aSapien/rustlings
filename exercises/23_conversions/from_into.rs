@@ -24,8 +24,9 @@ impl Default for Person {
     }
 }
 
-// Your task is to complete this implementation in order for the line `let p =
-// Person::from("Mark,20")` to compile Please note that you'll need to parse the
+
+// Your task is to complete this implementation in order for the line `let p1 =
+// Person::from("Mark,20")` to compile. Please note that you'll need to parse the
 // age component into a `usize` with something like `"4".parse::<usize>()`. The
 // outcome of this needs to be handled appropriately.
 //
@@ -41,6 +42,7 @@ impl Default for Person {
 // Person Otherwise, then return an instantiated Person object with the results
 
 impl From<&str> for Person {
+<<<<<<< HEAD:exercises/conversions/from_into.rs
     fn from(s: &str) -> Person {
         if s.len() == 0 {
             return Person::default();
@@ -64,6 +66,12 @@ impl From<&str> for Person {
             Person::default()
         }
     }
+||||||| 9a743f8:exercises/conversions/from_into.rs
+    fn from(s: &str) -> Person {
+    }
+=======
+    fn from(s: &str) -> Person {}
+>>>>>>> main:exercises/23_conversions/from_into.rs
 }
 
 fn main() {
@@ -146,14 +154,14 @@ mod tests {
     #[test]
     fn test_trailing_comma() {
         let p: Person = Person::from("Mike,32,");
-        assert_eq!(p.name, "Mike");
-        assert_eq!(p.age, 32);
+        assert_eq!(p.name, "John");
+        assert_eq!(p.age, 30);
     }
 
     #[test]
     fn test_trailing_comma_and_some_string() {
-        let p: Person = Person::from("Mike,32,man");
-        assert_eq!(p.name, "Mike");
-        assert_eq!(p.age, 32);
+        let p: Person = Person::from("Mike,32,dog");
+        assert_eq!(p.name, "John");
+        assert_eq!(p.age, 30);
     }
 }

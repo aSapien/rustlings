@@ -16,7 +16,7 @@ pub fn factorial(num: u64) -> u64 {
     result
     // Complete this function to return the factorial of num
     // Do not use:
-    // - return
+    // - early returns (using the `return` keyword explicitly)
     // Try not to use:
     // - imperative style loops (for, while)
     // - additional variables
